@@ -12,7 +12,7 @@ void setup() {
 
 void loop() {
   int soilValue = analogRead(soilpin);
-  if (soilValue < threshold) {
+  if (soilValue > threshold) {
     Serial.println("Soil is dry");
     digitalWrite(ledpin, HIGH);
   } else {
